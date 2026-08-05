@@ -1,0 +1,3 @@
+Graph (adjacency list): {0: [1, 2], 1: [2, 3], 2: [3], 3: [4], 4: []}
+DFS start: 0
+DFS order: [0, 1, 2, 3, 4]

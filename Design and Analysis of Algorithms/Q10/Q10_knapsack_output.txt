@@ -1,0 +1,5 @@
+Weights: [2, 3, 4, 5]
+Values : [3, 4, 5, 8]
+Capacity: 5
+Max value: 8
+Chosen item indices: [3] (0-based)
