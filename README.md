@@ -27,9 +27,9 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 |---|---|
 | Python | ✅ Uploaded |
 | C++ | ✅ Uploaded |
-| Data Structures | 🔜 Coming soon |
+| Data Structures | ✅ Uploaded |
 | Computer System Architecture | 🔜 Coming soon |
-| Web Design & Development | 🔜 Coming soon |
+| Web Design & Development | ✅ Uploaded |
 | Operating Systems | 🔜 Coming soon |
 | Database Management Systems | 🔜 Coming soon |
 | Data Mining | 🔜 Coming soon |
@@ -44,6 +44,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Information Security | 🔜 Coming soon |
 | Ethical Hacking | 🔜 Coming soon |
 | Blockchain and Its Applications | 🔜 Coming soon |
+| Others (not specified) | 🔜 Coming soon |
 
 ---
 
