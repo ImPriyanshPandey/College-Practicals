@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Largest Three Numbers</title>
+</head>
+<body>
+  <!-- Add the missing input element and button -->
+  <label for="numberInput">Enter a number:</label>
+  <input type="text" id="numberInput">
+  <button id="enterNumberBtn">Enter Number</button>
+
+  <script>
+    const numbers = [];
+
+    function findLargestThree() {
+      numbers.sort((a, b) => b - a);
+
+      const resultList = document.getElementById('resultList');
+      resultList.innerHTML = '';
+      for (let i = 0; i < Math.min(3, numbers.length); i++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = numbers[i];
+        resultList.appendChild(listItem);
+      }
+    }
+
+    // button click
+    document.getElementById('enterNumberBtn').addEventListener('click', () => {
+      // Get the input value
+      const number = parseInt(document.getElementById('numberInput').value);
+      if (!isNaN(number)) {
+        numbers.push(number);
+        document.getElementById('numberInput').value = '';
+        // Find and display the largest three numbers
+        findLargestThree();
+      } else {
+        alert('Please enter a valid number.');
+      }
+    });
+  </script>
+
+  <!-- Add a container for displaying the result -->
+  <ul id="resultList"></ul>
+</body>
+</html>

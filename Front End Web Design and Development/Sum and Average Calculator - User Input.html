@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sum and Average Calculator</title>
+</head>
+
+<body>
+
+  <label for="numbersInput">Enter positive numbers (terminated by 0, separate with comma):</label>
+  <input type="text" id="numbersInput">
+  <button onclick="calculateSumAndAverage()">Calculate</button>
+
+  <script>
+    function calculateSumAndAverage() {
+      const inputString = document.getElementById("numbersInput").value;
+      const numbersArray = inputString.split(",").map(Number);
+
+      const output = document.createElement("p");
+
+      const positiveNumbers = numbersArray.filter(num => !isNaN(num) && num >= 0);
+
+      if (positiveNumbers.length > 0) {
+        const sum = positiveNumbers.reduce((acc, num) => acc + num, 0);
+        const average = sum / positiveNumbers.length;
+        output.textContent = `Sum: ${sum}, Average: ${average.toFixed(2)}`;
+      } else {
+        output.textContent = "Please enter valid positive numbers.";
+      }
+
+      document.body.appendChild(output);
+    }
+  </script>
+
+</body>
+
+</html>

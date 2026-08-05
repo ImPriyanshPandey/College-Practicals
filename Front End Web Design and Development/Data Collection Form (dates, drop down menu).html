@@ -1,0 +1,142 @@
+<html>
+<html lang="en">
+<head>
+   <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: #ff0000;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label for="rollNo">Roll No:</label>
+    <input type="text" id="rollNo" name="rollNo" placeholder="Enter 7-digit Roll No">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+    <label>Gender:</label>
+    <label><input type="radio" name="gender" value="male"> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label>Subjects:</label>
+    <label><input type="checkbox" name="subjects" value="science"> Science</label>
+    <label><input type="checkbox" name="subjects" value="english"> English</label>
+    <label><input type="checkbox" name="subjects" value="computer"> Computer Science</label>
+    <label><input type="checkbox" name="subjects" value="hindi"> Hindi</label>
+
+    <label for="department">Department:</label>
+    <select id="department" name="department">
+      <option value="">Select Department</option>
+      <option value="cs">Computer Science</option>
+      <option value="ee">English</option>
+      <option value="me">Maths</option>
+      <option value="me">Hindi</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      const rollNo = document.getElementById('rollNo').value;
+      const name = document.getElementById('name').value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const dob = document.getElementById('dob').value;
+      const subjects = document.querySelectorAll('input[name="subjects"]:checked');
+      const department = document.getElementById('department').value;
+
+      // roll no validation
+      if (!/^\d{7}$/.test(rollNo)) {
+        alert('Please enter a valid 7-digit Roll No.');
+        return false;
+      }
+
+      // name validation
+      if (!/^[a-zA-Z\s]+$/.test(name)) {
+        alert('Please enter a valid name.');
+        return false;
+      }
+
+      // gender validation
+      if (!gender) {
+        alert('Please select a gender.');
+        return false;
+      }
+
+      // dob validation
+      if (!dob) {
+        alert('Please enter a valid Date of Birth.');
+        return false;
+      }
+
+      // subjects validation
+      if (subjects.length === 0) {
+        alert('Please select at least one subject.');
+        return false;
+      }
+
+      // department validation
+      if (!department) {
+        alert('Please select a department.');
+        return false;
+      }
+
+      alert('Form submitted successfully!');
+      return true;
+    }
+  </script>
+
+</body>
+</html>

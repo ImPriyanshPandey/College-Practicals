@@ -1,0 +1,42 @@
+<html>
+<head>
+   <title>Multiplication Table Generator</title>
+</head>
+<body>
+  <!-- Add the missing input element -->
+  <label for="numberInput">Enter a number:</label>
+  <input type="text" id="numberInput">
+  
+  <button id="generateTableBtn">Generate Table</button>
+
+  <div id="tableContainer"></div>
+
+  <script>
+    function generateTable() {
+      // Get the input value
+      const number = document.getElementById('numberInput').value;
+
+      // Clear the previous table
+      document.getElementById('tableContainer').innerHTML = '';
+
+      const table = document.createElement('table');
+      table.border = '1';
+
+      for (let i = 1; i <= 10; i++) {
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+
+        cell1.textContent = `${number} x ${i}`;
+        cell2.textContent = number * i;
+      }
+      document.getElementById('tableContainer').appendChild(table);
+    }
+
+    // Check for the existence of the button element before adding the event listener
+    if (document.getElementById('generateTableBtn')) {
+      document.getElementById('generateTableBtn').addEventListener('click', generateTable);
+    }
+  </script>
+</body>
+</html>
