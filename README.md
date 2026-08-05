@@ -2,7 +2,7 @@
 
 Welcome! This repository is a personal archive of practical work, mini-projects, and hands-on exercises I've built while studying various areas of Computer Science in college.
 
-Some of these have been sitting on old college PCs and a retired laptop for quite sometime - this repo is where they're finally getting organized and shared in one place.
+Some of these were sitting on old college PCs and a retired laptop for quite sometime - this repo is where they're finally getting organized and shared in one place from my old laptop.
 
 ---
 
@@ -50,7 +50,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 
 ## 🧭 How to Navigate
 
-1. Click into a subject folder above (once it's uploaded)
+1. Click into any subject folder above.
 2. Files are usually named or numbered by practical (e.g. `practical1_loops.py`)
 3. Click any file to view it directly on GitHub.
 
