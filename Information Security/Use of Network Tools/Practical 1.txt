@@ -1,0 +1,435 @@
+Microsoft Windows [Version 10.0.26200.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\priya>ping google.com
+
+Pinging google.com [2404:6800:4002:828::200e] with 32 bytes of data:
+Reply from 2404:6800:4002:828::200e: time=19ms
+Reply from 2404:6800:4002:828::200e: time=92ms
+Reply from 2404:6800:4002:828::200e: time=93ms
+Reply from 2404:6800:4002:828::200e: time=106ms
+
+Ping statistics for 2404:6800:4002:828::200e:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 19ms, Maximum = 106ms, Average = 77ms
+
+C:\Users\priya>ipconfig
+
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 2401:4900:8f60:557d:1941:d19:1eb7:ee30
+   Temporary IPv6 Address. . . . . . : 2401:4900:8f60:557d:2c09:b2f4:7137:85d0
+   Link-local IPv6 Address . . . . . : fe80::3b2d:a6e:b28:a086%9
+   IPv4 Address. . . . . . . . . . . : 192.168.1.8
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::f627:56ff:fe76:229f%9
+                                       192.168.1.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\priya>ipconfig/all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Vivobook-S14
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 52-2E-91-75-9F-92
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : 56-2E-91-75-9F-92
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek 8852BE Wireless LAN WiFi 6 PCI-E NIC
+   Physical Address. . . . . . . . . : 50-2E-91-75-9F-92
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2401:4900:8f60:557d:1941:d19:1eb7:ee30(Preferred)
+   Temporary IPv6 Address. . . . . . : 2401:4900:8f60:557d:2c09:b2f4:7137:85d0(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::3b2d:a6e:b28:a086%9(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.1.8(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : 30 April 2026 23:05:06
+   Lease Expires . . . . . . . . . . : 02 May 2026 21:25:27
+   Default Gateway . . . . . . . . . : fe80::f627:56ff:fe76:229f%9
+                                       192.168.1.1
+   DHCP Server . . . . . . . . . . . : 192.168.1.1
+   DHCPv6 IAID . . . . . . . . . . . : 139472529
+   DHCPv6 Client DUID. . . . . . . . : 00-01-01-00-31-76-7B-70-50-2E-91-75-9F-92
+   DNS Servers . . . . . . . . . . . : 2401:4900:50:9::7dd
+                                       2401:4900:50:9::7bb
+                                       192.168.1.1
+                                       2401:4900:50:9::7dd
+                                       2401:4900:50:9::7bb
+   Primary WINS Server . . . . . . . : 192.168.1.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 50-2E-91-75-9F-93
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+C:\Users\priya>tracert google.com
+
+Tracing route to google.com [2404:6800:4002:828::200e]
+over a maximum of 30 hops:
+
+  1     7 ms     6 ms     6 ms  2401:4900:8f60:557d:f627:56ff:fe76:229f
+  2     *        *        *     Request timed out.
+  3     *        *        *     Request timed out.
+  4     6 ms    23 ms     5 ms  2404:a800:1a00:209::889
+  5     6 ms     6 ms     6 ms  2001:4860:1:1::3b10
+  6     8 ms    16 ms    10 ms  2404:6800:81e1:4c0::1
+  7     6 ms     6 ms     7 ms  2001:4860:0:1::50a
+  8     6 ms     6 ms     6 ms  2001:4860:0:1::7604
+  9     8 ms    14 ms     6 ms  2001:4860:0:1::78bd
+ 10     8 ms     8 ms     9 ms  2001:4860:0:1::5393
+ 11    46 ms    45 ms     7 ms  tzdelb-ao-in-x0e.1e100.net [2404:6800:4002:828::200e]
+
+Trace complete.
+
+C:\Users\priya>arp -a
+
+Interface: 192.168.1.8 --- 0x9
+  Internet Address      Physical Address      Type
+  100.82.93.78          d6-e2-d4-ab-56-91     dynamic
+  192.168.1.1           f4-27-56-76-22-9f     dynamic
+  192.168.1.4           d6-e2-d4-ab-56-91     dynamic
+  192.168.1.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+C:\Users\priya>netstat
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49710        Vivobook-S14:49711     ESTABLISHED
+  TCP    127.0.0.1:49711        Vivobook-S14:49710     ESTABLISHED
+  TCP    127.0.0.1:49712        Vivobook-S14:49713     ESTABLISHED
+  TCP    127.0.0.1:49713        Vivobook-S14:49712     ESTABLISHED
+  TCP    127.0.0.1:49714        Vivobook-S14:49715     ESTABLISHED
+  TCP    127.0.0.1:49715        Vivobook-S14:49714     ESTABLISHED
+  TCP    127.0.0.1:55283        Vivobook-S14:55284     ESTABLISHED
+  TCP    127.0.0.1:55284        Vivobook-S14:55283     ESTABLISHED
+  TCP    127.0.0.1:55285        Vivobook-S14:55286     ESTABLISHED
+  TCP    127.0.0.1:55286        Vivobook-S14:55285     ESTABLISHED
+  TCP    127.0.0.1:62875        Vivobook-S14:62876     ESTABLISHED
+  TCP    127.0.0.1:62876        Vivobook-S14:62875     ESTABLISHED
+  TCP    192.168.1.8:49223      ec2-100-52-73-199:https  ESTABLISHED
+  TCP    192.168.1.8:50540      ec2-52-66-7-36:https   ESTABLISHED
+  TCP    192.168.1.8:51103      ec2-52-66-7-36:https   ESTABLISHED
+  TCP    192.168.1.8:51416      ec2-3-111-241-224:https  ESTABLISHED
+  TCP    192.168.1.8:51550      143.244.143.7:https    ESTABLISHED
+  TCP    192.168.1.8:52727      ec2-100-52-73-199:https  ESTABLISHED
+  TCP    192.168.1.8:53927      ec2-18-97-36-46:https  ESTABLISHED
+  TCP    192.168.1.8:58496      143.244.143.7:https    ESTABLISHED
+  TCP    192.168.1.8:60782      143.244.143.7:https    ESTABLISHED
+  TCP    192.168.1.8:60951      ec2-52-203-130-61:https  ESTABLISHED
+  TCP    192.168.1.8:61016      ec2-52-203-130-61:https  ESTABLISHED
+  TCP    192.168.1.8:61524      143.244.143.7:https    ESTABLISHED
+  TCP    192.168.1.8:61919      ec2-3-111-241-224:https  ESTABLISHED
+  TCP    192.168.1.8:62133      143.244.143.7:https    ESTABLISHED
+  TCP    192.168.1.8:62168      13.69.239.72:https     TIME_WAIT
+  TCP    192.168.1.8:62877      ec2-13-204-106-34:https  ESTABLISHED
+  TCP    192.168.1.8:64453      167.82.57.140:https    ESTABLISHED
+  TCP    192.168.1.8:64597      143.244.143.7:https    ESTABLISHED
+  TCP    192.168.1.8:64642      141:https              ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:49469  [2603:1040:a06:6::]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:50618  [2001:4860:4802:34::9d]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:51653  [2001:4860:4802:38::223]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53115  [2603:1040:a06:3::13]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53245  [2607:6bc0::10]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53717  del03s06-in-x0e:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:54583  sm-in-f188:5228        ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:54718  tzdelb-ap-in-x0a:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:56374  [2001:4860:4802:34::9d]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:57581  sm-in-f119:https       ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58164  [2a04:4e42:25::347]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58401  del11s15-in-x0e:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58500  whatsapp-cdn6-shv-02-del3:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58726  [2620:1ec:33::11]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59024  g2600-140f-0200-0000-0000-0000-1737-6c33:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59396  [2606:4700:8391:a203:a60c:66f:b6d7:ac2c]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59768  tzdela-ay-in-x11:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59899  [2001:4860:4802:34::223]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:61298  del03s09-in-x0e:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62167  [2607:6bc0::10]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62815  del12s04-in-x08:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62872  [2607:6bc0::10]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63151  [2603:1040:a06:3::13]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63519  tzdela-bd-in-x03:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63536  [2600:1901:0:179c::]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63537  [2603:1063:10:149::365:7ea3]:https  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63689  [2603:1047:1:98::80]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63702  del12s07-in-x0e:https  ESTABLISHED
+
+C:\Users\priya>netstat -an
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49669          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49670          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49678          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49681          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49682          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49683          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49684          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49685          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49688          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49689          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49690          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49691          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49692          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:57100          0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:5037         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:24830        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49710        127.0.0.1:49711        ESTABLISHED
+  TCP    127.0.0.1:49711        127.0.0.1:49710        ESTABLISHED
+  TCP    127.0.0.1:49712        127.0.0.1:49713        ESTABLISHED
+  TCP    127.0.0.1:49713        127.0.0.1:49712        ESTABLISHED
+  TCP    127.0.0.1:49714        127.0.0.1:49715        ESTABLISHED
+  TCP    127.0.0.1:49715        127.0.0.1:49714        ESTABLISHED
+  TCP    127.0.0.1:55283        127.0.0.1:55284        ESTABLISHED
+  TCP    127.0.0.1:55284        127.0.0.1:55283        ESTABLISHED
+  TCP    127.0.0.1:55285        127.0.0.1:55286        ESTABLISHED
+  TCP    127.0.0.1:55286        127.0.0.1:55285        ESTABLISHED
+  TCP    127.0.0.1:63538        127.0.0.1:63539        ESTABLISHED
+  TCP    127.0.0.1:63539        127.0.0.1:63538        ESTABLISHED
+  TCP    192.168.1.8:139        0.0.0.0:0              LISTENING
+  TCP    192.168.1.8:50077      54.192.142.18:443      ESTABLISHED
+  TCP    192.168.1.8:50540      52.66.7.36:443         ESTABLISHED
+  TCP    192.168.1.8:51416      3.111.241.224:443      LAST_ACK
+  TCP    192.168.1.8:53927      18.97.36.46:443        ESTABLISHED
+  TCP    192.168.1.8:60951      52.203.130.61:443      ESTABLISHED
+  TCP    192.168.1.8:61919      3.111.241.224:443      ESTABLISHED
+  TCP    192.168.1.8:63540      3.111.241.224:443      ESTABLISHED
+  TCP    192.168.1.8:64453      167.82.57.140:443      ESTABLISHED
+  TCP    192.168.1.8:64642      34.54.194.141:443      TIME_WAIT
+  TCP    [::]:135               [::]:0                 LISTENING
+  TCP    [::]:445               [::]:0                 LISTENING
+  TCP    [::]:49664             [::]:0                 LISTENING
+  TCP    [::]:49665             [::]:0                 LISTENING
+  TCP    [::]:49666             [::]:0                 LISTENING
+  TCP    [::]:49669             [::]:0                 LISTENING
+  TCP    [::]:49670             [::]:0                 LISTENING
+  TCP    [::]:49678             [::]:0                 LISTENING
+  TCP    [::1]:42050            [::]:0                 LISTENING
+  TCP    [::1]:42050            [::]:0                 LISTENING
+  TCP    [::1]:49671            [::]:0                 LISTENING
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:49469  [2603:1040:a06:6::]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:50618  [2001:4860:4802:34::9d]:443  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:51653  [2001:4860:4802:38::223]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53115  [2603:1040:a06:3::13]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53245  [2607:6bc0::10]:443    ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53717  [2404:6800:4002:805::200e]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:54583  [2404:6800:4003:c06::bc]:5228  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:54718  [2404:6800:4002:830::200a]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:56374  [2001:4860:4802:34::9d]:443  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:57581  [2404:6800:4003:c06::77]:443  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58164  [2a04:4e42:25::347]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58401  [2404:6800:4002:81a::200e]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58500  [2a03:2880:f315:120:face:b00c:0:167]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58726  [2620:1ec:33::11]:443  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59396  [2606:4700:8391:a203:a60c:66f:b6d7:ac2c]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59768  [2404:6800:4002:803::2011]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59899  [2001:4860:4802:34::223]:443  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:61298  [2404:6800:4002:804::200e]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62167  [2607:6bc0::10]:443    TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62815  [2404:6800:4002:821::2008]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62872  [2607:6bc0::10]:443    ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63151  [2603:1040:a06:3::13]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63519  [2404:6800:4002:802::2003]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63536  [2600:1901:0:179c::]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63537  [2603:1063:10:149::365:7ea3]:443  ESTABLISHED
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63689  [2603:1047:1:98::80]:443  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63702  [2404:6800:4002:824::200e]:443  ESTABLISHED
+  UDP    0.0.0.0:5050           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5355           *:*
+  UDP    0.0.0.0:49666          0.0.0.1:443
+  UDP    0.0.0.0:54560          *:*
+  UDP    0.0.0.0:55520          0.0.32.3:443
+  UDP    0.0.0.0:56144          0.0.1.103:443
+  UDP    0.0.0.0:58078          *:*
+  UDP    0.0.0.0:59390          0.0.32.10:443
+  UDP    0.0.0.0:65167          0.0.32.14:443
+  UDP    127.0.0.1:1900         *:*
+  UDP    127.0.0.1:49664        127.0.0.1:49664
+  UDP    127.0.0.1:59720        *:*
+  UDP    192.168.1.8:137        *:*
+  UDP    192.168.1.8:138        *:*
+  UDP    192.168.1.8:1900       *:*
+  UDP    192.168.1.8:2177       *:*
+  UDP    192.168.1.8:59719      *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5355              *:*
+  UDP    [::]:49666             [2404:6800:4002:29::1]:443
+  UDP    [::]:54560             [2001:4860:482a:7700::]:443
+  UDP    [::]:55520             [2404:6800:4002:821::2003]:443
+  UDP    [::]:56144             [2a03:2880:f315:120:face:b00c:0:167]:443
+  UDP    [::]:58078             *:*
+  UDP    [::]:59390             [2404:6800:4002:802::200a]:443
+  UDP    [::]:65167             [2404:6800:4009:825::200e]:443
+  UDP    [::1]:1900             *:*
+  UDP    [::1]:59718            *:*
+  UDP    [2401:4900:8f60:557d:1941:d19:1eb7:ee30]:2177  *:*
+  UDP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:2177  *:*
+  UDP    [fe80::3b2d:a6e:b28:a086%9]:1900  *:*
+  UDP    [fe80::3b2d:a6e:b28:a086%9]:2177  *:*
+  UDP    [fe80::3b2d:a6e:b28:a086%9]:59717  *:*
+
+C:\Users\priya>
+
+
+AS ADMIN -
+C:\Windows\System32>netstat -b
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49710        Vivobook-S14:49711     ESTABLISHED
+ [WUDFHost.exe]
+  TCP    127.0.0.1:49711        Vivobook-S14:49710     ESTABLISHED
+ [WUDFHost.exe]
+  TCP    127.0.0.1:49712        Vivobook-S14:49713     ESTABLISHED
+ [WUDFHost.exe]
+  TCP    127.0.0.1:49713        Vivobook-S14:49712     ESTABLISHED
+ [WUDFHost.exe]
+  TCP    127.0.0.1:49714        Vivobook-S14:49715     ESTABLISHED
+ [ipfsvc.exe]
+  TCP    127.0.0.1:49715        Vivobook-S14:49714     ESTABLISHED
+ [ipfsvc.exe]
+  TCP    127.0.0.1:55283        Vivobook-S14:55284     ESTABLISHED
+ [adb.exe]
+  TCP    127.0.0.1:55284        Vivobook-S14:55283     ESTABLISHED
+ [adb.exe]
+  TCP    127.0.0.1:55285        Vivobook-S14:55286     ESTABLISHED
+ [adb.exe]
+  TCP    127.0.0.1:55286        Vivobook-S14:55285     ESTABLISHED
+ [adb.exe]
+  TCP    127.0.0.1:63538        Vivobook-S14:63539     ESTABLISHED
+ Can not obtain ownership information
+  TCP    127.0.0.1:63539        Vivobook-S14:63538     ESTABLISHED
+ Can not obtain ownership information
+  TCP    192.168.1.8:50077      server-54-192-142-18:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.1.8:50078      20.190.146.39:https    ESTABLISHED
+  wlidsvc
+ [svchost.exe]
+  TCP    192.168.1.8:50540      ec2-52-66-7-36:https   ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.1.8:53927      ec2-18-97-36-46:https  ESTABLISHED
+ [Claude.exe]
+  TCP    192.168.1.8:60951      ec2-52-203-130-61:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.1.8:61919      ec2-3-111-241-224:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.1.8:63540      ec2-3-111-241-224:https  ESTABLISHED
+ Can not obtain ownership information
+  TCP    192.168.1.8:64453      167.82.57.140:https    ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.1.8:64642      141:https              TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:49469  [2603:1040:a06:6::]:https  ESTABLISHED
+  WpnService
+ [svchost.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:50236  [2603:1046:900:68::2]:https  ESTABLISHED
+  UdkUserSvc_2cf59e5f
+ [svchost.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:50680  whatsapp-cdn6-shv-02-del3:https  ESTABLISHED
+ [msedgewebview2.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:51086  [2600:1901:0:179c::]:https  ESTABLISHED
+ [Claude.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:51653  [2001:4860:4802:38::223]:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53115  [2603:1040:a06:3::13]:https  ESTABLISHED
+ [CrossDeviceService.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:53717  del03s06-in-x0e:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:54583  sm-in-f188:5228        ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:54718  tzdelb-ap-in-x0a:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:56074  g2600-140f-2e00-0000-0000-0000-b856-70d9:https  ESTABLISHED
+ [msedgewebview2.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:56075  [2603:1046:c04:1422::2]:https  ESTABLISHED
+ [SearchHost.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:57581  sm-in-f119:https       TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58164  [2a04:4e42:25::347]:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:58401  del11s15-in-x0e:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59396  [2606:4700:8391:a203:a60c:66f:b6d7:ac2c]:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59768  tzdela-ay-in-x11:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:59899  [2001:4860:4802:34::223]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:61298  del03s09-in-x0e:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62167  [2607:6bc0::10]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:62815  del12s04-in-x08:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63151  [2603:1040:a06:3::13]:https  ESTABLISHED
+ [PhoneExperienceHost.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63519  tzdela-bd-in-x03:https  ESTABLISHED
+ [chrome.exe]
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63536  [2600:1901:0:179c::]:https  TIME_WAIT
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63537  [2603:1063:10:149::365:7ea3]:https  ESTABLISHED
+ Can not obtain ownership information
+  TCP    [2401:4900:8f60:557d:2c09:b2f4:7137:85d0]:63702  del12s07-in-x0e:https  ESTABLISHED
+ [chrome.exe]
+
+C:\Windows\System32>
