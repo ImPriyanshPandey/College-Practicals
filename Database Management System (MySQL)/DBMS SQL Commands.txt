@@ -1,0 +1,526 @@
+mysql> create database priyansh_bap_2635_sem5;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use priyansh_bap_2635_sem5;
+Database changed
+mysql> create table students(r_no char(100) primary key, s_name varchar(200), course varchar(200), dob date);
+Query OK, 0 rows affected (0.24 sec)
+
+mysql> create table societies(soc_id char(100) primary key, soc_name varchar(200), m_name varchar(200), t_seats int(50));
+Query OK, 0 rows affected, 1 warning (0.54 sec)
+
+mysql> create table enrollment(er_no char(100), sid char(100), doe date, primary key (er_no, sid), foreign key(er_no) references students(r_no), foreign key(sid) references societies(soc_id));
+Query OK, 0 rows affected (0.97 sec)
+
+mysql> show tables;
++----------------------------------+
+| Tables_in_priyansh_bap_2635_sem5 |
++----------------------------------+
+| enrollment                       |
+| societies                        |
+| students                         |
++----------------------------------+
+
+mysql> insert into students values ('X10001', 'Alice', 'Computer Science', '2000-05-15');
+Query OK, 1 row affected (0.16 sec)
+
+mysql> insert into students values ('X20009', 'Zachary', 'Chemistry', '1999-11-20');
+Query OK, 1 row affected (0.32 sec)
+
+mysql> insert into students values ('X30002', 'Ava', 'Mathematics', '2001-08-08');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into students values ('Y40003', 'John', 'Physics', '2000-02-10');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into students values ('X50009', 'Zara', 'Chemistry', '2002-12-25');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into students values ('Y60004', 'Michael', 'Computer Science', '2001-01-05');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from students;
++--------+---------+------------------+------------+
+| r_no   | s_name  | course           | dob        |
++--------+---------+------------------+------------+
+| X10001 | Alice   | Computer Science | 2000-05-15 |
+| X20009 | Zachary | Chemistry        | 1999-11-20 |
+| X30002 | Ava     | Mathematics      | 2001-08-08 |
+| X50009 | Zara    | Chemistry        | 2002-12-25 |
+| Y40003 | John    | Physics          | 2000-02-10 |
+| Y60004 | Michael | Computer Science | 2001-01-05 |
++--------+---------+------------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into students values ('X70005', 'Angela', 'Biology', '1998-09-15');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into students values ('Y80006', 'Bob', 'History', '2002-04-01');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into students values ('Z90009', 'Steve', 'Computer Science', '2003-10-20');
+Query OK, 1 row affected (0.20 sec)
+
+mysql> insert into students values ('Y10007', ' Grace', 'Mathematics', '2000-03-15');
+Query OK, 1 row affected (0.23 sec)
+
+mysql> insert into students values ('Y20008', 'David', 'Engineering', '2001-05-21');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into students values ('Y30010', 'Emily', 'Computer Science', '2001-07-19');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from students;
++--------+---------+------------------+------------+
+| r_no   | s_name  | course           | dob        |
++--------+---------+------------------+------------+
+| X10001 | Alice   | Computer Science | 2000-05-15 |
+| X20009 | Zachary | Chemistry        | 1999-11-20 |
+| X30002 | Ava     | Mathematics      | 2001-08-08 |
+| X50009 | Zara    | Chemistry        | 2002-12-25 |
+| X70005 | Angela  | Biology          | 1998-09-15 |
+| Y10007 |  Grace  | Mathematics      | 2000-03-15 |
+| Y20008 | David   | Engineering      | 2001-05-21 |
+| Y30010 | Emily   | Computer Science | 2001-07-19 |
+| Y40003 | John    | Physics          | 2000-02-10 |
+| Y60004 | Michael | Computer Science | 2001-01-05 |
+| Y80006 | Bob     | History          | 2002-04-01 |
+| Z90009 | Steve   | Computer Science | 2003-10-20 |
++--------+---------+------------------+------------+
+12 rows in set (0.00 sec)
+
+mysql> insert into societies values ('S1', 'NSS', 'Dr. Gupta', 50);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into societies values ('S2', 'Debating', 'Ms. Smith', 30);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into societies values ('S3', 'Dancing', 'Mr. Sharma', 40);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into societies values ('S4', 'Sashakt', 'Mr. Verma', 20);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into societies values ('S5', 'Robotics', 'Dr. Gupta', 35);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into societies values ('S6', 'Music', 'Ms. Roy', 25);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into societies values ('S7', 'Art', 'Mr. Kumar', 30);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into societies values ('S8', 'Drama', 'Mr. Singh', 20);
+Query OK, 1 row affected (0.21 sec)
+
+mysql> select * from societies;
++--------+----------+------------+---------+
+| soc_id | soc_name | m_name     | t_seats |
++--------+----------+------------+---------+
+| S1     | NSS      | Dr. Gupta  |      50 |
+| S2     | Debating | Ms. Smith  |      30 |
+| S3     | Dancing  | Mr. Sharma |      40 |
+| S4     | Sashakt  | Mr. Verma  |      20 |
+| S5     | Robotics | Dr. Gupta  |      35 |
+| S6     | Music    | Ms. Roy    |      25 |
+| S7     | Art      | Mr. Kumar  |      30 |
+| S8     | Drama    | Mr. Singh  |      20 |
++--------+----------+------------+---------+
+8 rows in set (0.00 sec)
+
+
+mysql> insert into enrollment values  ('X10001', 'S1', '2022-01-10');
+Query OK, 1 row affected (0.34 sec)
+
+mysql> insert into enrollment values  ('X20009', 'S3', '2023-02-15');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into enrollment values  ('X30002', 'S2', '2023-03-10');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into enrollment values  ('Y40003', 'S4', '2022-11-25');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into enrollment values  ('X50009', 'S1', '2023-01-05');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into enrollment values  ('Y60004', 'S5', '2022-10-10');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into enrollment values  ('X70005', 'S2', '2022-09-12');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into enrollment values  ('Y80006', 'S6', '2023-04-14');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into enrollment values  ('Y10007', 'S3', '2023-06-07');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into enrollment values  ('Y20008', 'S4', '2022-07-11');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into enrollment values  ('Y30010', 'S5', '2022-08-13');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into enrollment values  ('X10001', 'S3', '2023-03-11');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into enrollment values  ('X10001', 'S2', '2023-04-12');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into enrollment values  ('X30002', 'S1', '2023-04-11');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into enrollment values  ('Y80006', 'S5', '2023-07-16');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from enrollment;
++--------+-----+------------+
+| er_no  | sid | doe        |
++--------+-----+------------+
+| X10001 | S1  | 2022-01-10 |
+| X10001 | S2  | 2023-04-12 |
+| X10001 | S3  | 2023-03-11 |
+| X20009 | S3  | 2023-02-15 |
+| X30002 | S1  | 2023-04-11 |
+| X30002 | S2  | 2023-03-10 |
+| X50009 | S1  | 2023-01-05 |
+| X70005 | S2  | 2022-09-12 |
+| Y10007 | S3  | 2023-06-07 |
+| Y20008 | S4  | 2022-07-11 |
+| Y30010 | S5  | 2022-08-13 |
+| Y40003 | S4  | 2022-11-25 |
+| Y60004 | S5  | 2022-10-10 |
+| Y80006 | S5  | 2023-07-16 |
+| Y80006 | S6  | 2023-04-14 |
++--------+-----+------------+
+15 rows in set (0.00 sec)
+
+mysql> select s_name from students, enrollment where r_no = enrollment.er_no;
++---------+
+| s_name  |
++---------+
+| Alice   |
+| Alice   |
+| Alice   |
+| Zachary |
+| Ava     |
+| Ava     |
+| Zara    |
+| Angela  |
+|  Grace  |
+| David   |
+| Emily   |
+| John    |
+| Michael |
+| Bob     |
+| Bob     |
++---------+
+15 rows in set (0.00 sec)
+
+mysql> select  soc_name from societies;
++----------+
+| soc_name |
++----------+
+| NSS      |
+| Debating |
+| Dancing  |
+| Sashakt  |
+| Robotics |
+| Music    |
+| Art      |
+| Drama    |
++----------+
+8 rows in set (0.00 sec)
+
+mysql> select s_name from students where s_name like "A%";
++--------+
+| s_name |
++--------+
+| Alice  |
+| Ava    |
+| Angela |
++--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from students where course = 'Computer Science' or course = 'Chemistry';
++--------+---------+------------------+------------+
+| r_no   | s_name  | course           | dob        |
++--------+---------+------------------+------------+
+| X10001 | Alice   | Computer Science | 2000-05-15 |
+| Y30010 | Emily   | Computer Science | 2001-07-19 |
+| Y60004 | Michael | Computer Science | 2001-01-05 |
+| Z90009 | Steve   | Computer Science | 2003-10-20 |
++--------+---------+------------------+------------+
+4 rows in set, 1 warning (0.04 sec)
+
+mysql> select * from students where r_no like "X%9" or r_no like "Z%9";
++--------+---------+------------------+------------+
+| r_no   | s_name  | course           | dob        |
++--------+---------+------------------+------------+
+| X20009 | Zachary | Chemistry        | 1999-11-20 |
+| X50009 | Zara    | Chemistry        | 2002-12-25 |
+| Z90009 | Steve   | Computer Science | 2003-10-20 |
++--------+---------+------------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from societies where t_seats > 25;
++--------+----------+------------+---------+
+| soc_id | soc_name | m_name     | t_seats |
++--------+----------+------------+---------+
+| S1     | NSS      | Dr. Gupta  |      50 |
+| S2     | Debating | Ms. Smith  |      30 |
+| S3     | Dancing  | Mr. Sharma |      40 |
+| S5     | Robotics | Dr. Gupta  |      35 |
+| S7     | Art      | Mr. Kumar  |      30 |
++--------+----------+------------+---------+
+5 rows in set (0.01 sec)
+
+mysql> select * from societies where t_seats >= 25;
++--------+----------+------------+---------+
+| soc_id | soc_name | m_name     | t_seats |
++--------+----------+------------+---------+
+| S1     | NSS      | Dr. Gupta  |      50 |
+| S2     | Debating | Ms. Smith  |      30 |
+| S3     | Dancing  | Mr. Sharma |      40 |
+| S5     | Robotics | Dr. Gupta  |      35 |
+| S6     | Music    | Ms. Roy    |      25 |
+| S7     | Art      | Mr. Kumar  |      30 |
++--------+----------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> update societies set m_name = 'Jay Shah' where soc_id = 'S2';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from societies;
++--------+----------+------------+---------+
+| soc_id | soc_name | m_name     | t_seats |
++--------+----------+------------+---------+
+| S1     | NSS      | Dr. Gupta  |      50 |
+| S2     | Debating | Jay Shah   |      30 |
+| S3     | Dancing  | Mr. Sharma |      40 |
+| S4     | Sashakt  | Mr. Verma  |      20 |
+| S5     | Robotics | Dr. Gupta  |      35 |
+| S6     | Music    | Ms. Roy    |      25 |
+| S7     | Art      | Mr. Kumar  |      30 |
+| S8     | Drama    | Mr. Singh  |      20 |
++--------+----------+------------+---------+
+8 rows in set (0.00 sec)
+
+mysql> select s.soc_name from societies s
+    -> JOIN enrollment e ON s.soc_id = e.sid grou by s.soc_name having count(e.er_no) > 5;
+Empty set (0.00 sec)
+
+mysql> SELECT s_name, dob from students where r_no = (select er_no from enrollment where sid = (select soc_id from societies where soc_name = 'NSS') order by er_no limit 1) order by dob desc limit 1;
++--------+------------+
+| s_name | dob        |
++--------+------------+
+| Alice  | 2000-05-15 |
++--------+------------+
+1 row in set (0.00 sec)
+
+mysql> select s_name from students where r_no=(select er_no from enrollment where sid=(select soc_id from societies where soc_name = 'NSS') order by dob desc limit 1);
++--------+
+| s_name |
++--------+
+| Alice  |
++--------+
+1 row in set (0.03 sec)
+
+mysql> select soc_name from societies where soc_id = (select sid from enrollment group by sid order by count(er_no) desc limit 1);
++----------+
+| soc_name |
++----------+
+| NSS      |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select s_name from students where r_no not in (select r_no from enrollment);
+Empty set (0.01 sec)
+
+mysql> select s_name from students where r_no in  (select r_no from enrollment group by r_no having count(distinct sid) >= 2);
++---------+
+| s_name  |
++---------+
+| Alice   |
+| Zachary |
+| Ava     |
+| Zara    |
+| Angela  |
+|  Grace  |
+| David   |
+| Emily   |
+| John    |
+| Michael |
+| Bob     |
+| Steve   |
++---------+
+12 rows in set (0.02 sec)
+
+mysql> select soc_name from societies where soc_id = (select sid from enrollment group by sid order by count(er_no) desc limit 1);
++----------+
+| soc_name |
++----------+
+| NSS      |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select soc_name from societies where soc_id in (select sid from enrolment group by sid having count(er_no) = (select max(student_count) from (select count(er_no) as student_count from enrolment group by sid) as counts));
++----------+
+| soc_name |
++----------+
+| NSS      |
+| Debating |
+| Dancing  |
+| Robotics |
++----------+
+4 rows in set (0.01 sec)
+
+mysql> select st.s_name as student_name, sc.soc_name as society_name from students st, societies sc, enrollment e where st.r_no = e.er_no and sc.soc_id = e.sid;
++--------------+--------------+
+| student_name | society_name |
++--------------+--------------+
+| Alice        | NSS          |
+| Alice        | Debating     |
+| Alice        | Dancing      |
+| Zachary      | Dancing      |
+| Ava          | NSS          |
+| Ava          | Debating     |
+| Zara         | NSS          |
+| Angela       | Debating     |
+|  Grace       | Dancing      |
+| David        | Sashakt      |
+| Emily        | Robotics     |
+| John         | Sashakt      |
+| Michael      | Robotics     |
+| Bob          | Robotics     |
+| Bob          | Music        |
++--------------+--------------+
+15 rows in set (0.00 sec)
+
+mysql> select st.s_name AS student_name from students st where st.r_no in (select e.er_no from enrollment e where e.sid IN (select sc.soc_id from societies sc where sc.soc_name in ('Debating', 'Dancing', 'Sashakt')));
++--------------+
+| student_name |
++--------------+
+| Alice        |
+| Zachary      |
+| Ava          |
+| Angela       |
+|  Grace       |
+| David        |
+| John         |
++--------------+
+7 rows in set (0.00 sec)
+
+mysql> select soc_name from societies where m_name like '%Gupta%';
++----------+
+| soc_name |
++----------+
+| NSS      |
+| Robotics |
++----------+
+2 rows in set (0.00 sec)
+
+mysql> select soc_name from societies where soc_id in (select sid from enrollment group by sid having count(er_no) <= (0.1 * max(t_seats)));
++----------+
+| soc_name |
++----------+
+| NSS      |
+| Debating |
+| Dancing  |
+| Sashakt  |
+| Robotics |
+| Music    |
++----------+
+6 rows in set (0.01 sec)
+
+mysql> select sid, count(er_no) as enrolled_count from enrollment group by sid;
++-----+----------------+
+| sid | enrolled_count |
++-----+----------------+
+| S1  |              3 |
+| S2  |              3 |
+| S3  |              3 |
+| S4  |              2 |
+| S5  |              3 |
+| S6  |              1 |
++-----+----------------+
+6 rows in set (0.00 sec)
+
+mysql> update societies set t_seats = t_seats + (t_seats * 0.1);
+Query OK, 8 rows affected (0.03 sec)
+Rows matched: 8  Changed: 8  Warnings: 0
+
+mysql> alter table enrollment add column fees_paid char(3) CHECK (fees_paid in ('Yes', 'No')) default 'No';
+Query OK, 15 rows affected (0.13 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+mysql> update enrollment set doe = '2018-01-15' where sid = 'S1';
+Query OK, 3 rows affected (0.03 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> update enrollment set doe = CURRENT_DATE where sid = 'S2';
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 3  Changed: 0  Warnings: 0
+
+mysql> update enrollment set doe = '2018-01-02' where sid = 'S3';
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> create view SocietyEnrollmentView as select sc.soc_name, count(e.er_no) as total_enrolled from societies sc left join enrollment e on sc.soc_id = e.sid group by sc.soc_name;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> SELECT s.s_name from students s where not exists (select 1 from societies sc where not exists (select 1 from enrollment e where e.sid = sc.soc_id AND e.er_no = s.r_no));
+Empty set (0.00 sec)
+
+mysql> select count(distinct sc.soc_id) as societies_with_more_than_5_students from societies sc join enrollment e on sc.soc_id = e.sid group by sc.soc_id having count(e.er_no) > 5;
+Empty set (0.02 sec)
+
+mysql> alter table students add cloumn mobile_number char(10) default '9999999999';
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select count(*) as total_students_above_20 from students where datediff(CURRENT_DATE, students.dob) / 365 > 20;
++-------------------------+
+| total_students_above_20 |
++-------------------------+
+|                      12 |
++-------------------------+
+1 row in set (0.01 sec)
+
+mysql> select s.s_name from students s join enrollment e on s.r_no = e.er_no where year(s.dob) = 2001;
++---------+
+| s_name  |
++---------+
+| Ava     |
+| Ava     |
+| David   |
+| Emily   |
+| Michael |
++---------+
+5 rows in set (0.00 sec)
+
+mysql> select count(distinct sc.soc_name) as society_count from societies sc join enrollment e ON sc.soc_id = e.sid group by sc.soc_id, sc.soc_name having sc.soc_name like 'S%T' and count(e.er_no) >= 5;
+Empty set (0.00 sec)
+
+mysql> select
+    ->     sc.soc_name AS Society_Name,
+    ->     sc.m_name AS Mentor_Name,
+    ->     sc.t_seats AS Total_Capacity,
+    ->     COUNT(e.er_no) AS Total_Enrolled,
+    ->     (sc.t_seats - COUNT(e.er_no)) AS Unfilled_Seats
+    -> from societies sc left join enrollment e ON sc.soc_id = e.sid group by sc.soc_id, sc.soc_name, sc.m_name, sc.t_seats;
++--------------+-------------+----------------+----------------+----------------+
+| Society_Name | Mentor_Name | Total_Capacity | Total_Enrolled | Unfilled_Seats |
++--------------+-------------+----------------+----------------+----------------+
+| NSS          | Dr. Gupta   |             55 |              3 |             52 |
+| Debating     | Jay Shah    |             33 |              3 |             30 |
+| Dancing      | Mr. Sharma  |             44 |              3 |             41 |
+| Sashakt      | Mr. Verma   |             22 |              2 |             20 |
+| Robotics     | Dr. Gupta   |             39 |              3 |             36 |
+| Music        | Ms. Roy     |             28 |              1 |             27 |
+| Art          | Mr. Kumar   |             33 |              0 |             33 |
+| Drama        | Mr. Singh   |             22 |              0 |             22 |
++--------------+-------------+----------------+----------------+----------------+
+8 rows in set (0.00 sec)
