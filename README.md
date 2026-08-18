@@ -31,7 +31,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Computer System Architecture | 🔜 Coming soon |
 | Web Design & Development | ✅ Uploaded |
 | Operating Systems | 🔜 Coming soon |
-| Database Management Systems | 🔜 Coming soon |
+| Database Management Systems | ✅ Uploaded |
 | Data Mining | 🔜 Coming soon |
 | Machine Learning | 🔜 Coming soon |
 | Deep Learning | 🔜 Coming soon |
@@ -41,7 +41,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Digital Image Processing | 🔜 Coming soon |
 | Computer Networks | 🔜 Coming soon |
 | Cyber Forensics | 🔜 Coming soon |
-| Information Security | 🔜 Coming soon |
+| Information Security | ✅ Uploaded |
 | Ethical Hacking | 🔜 Coming soon |
 | Blockchain and Its Applications | 🔜 Coming soon |
 | Others (not specified) | 🔜 Coming soon |
