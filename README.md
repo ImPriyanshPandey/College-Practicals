@@ -32,7 +32,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Web Design & Development | ✅ Uploaded |
 | Operating Systems | 🔜 Coming soon |
 | Database Management Systems | ✅ Uploaded |
-| Data Mining | 🔜 Coming soon |
+| Data Mining | ✅ Uploaded |
 | Machine Learning | 🔜 Coming soon |
 | Deep Learning | 🔜 Coming soon |
 | Natural Language Processing | 🔜 Coming soon |
