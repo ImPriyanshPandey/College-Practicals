@@ -36,14 +36,14 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Machine Learning | 🔜 Coming soon |
 | Deep Learning | 🔜 Coming soon |
 | Natural Language Processing | 🔜 Coming soon |
-| Reinforcement Learning | 🔜 Coming soon |
+| Reinforcement Learning | ✅ Uploaded |
 | Computer Graphics | 🔜 Coming soon |
 | Digital Image Processing | 🔜 Coming soon |
 | Computer Networks | 🔜 Coming soon |
 | Cyber Forensics | 🔜 Coming soon |
 | Information Security | ✅ Uploaded |
 | Ethical Hacking | 🔜 Coming soon |
-| Blockchain and Its Applications | 🔜 Coming soon |
+| Blockchain and Its Applications | ✅ Uploaded |
 | Others (not specified) | 🔜 Coming soon |
 
 ---
