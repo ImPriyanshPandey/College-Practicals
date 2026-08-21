@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <script>
+        function validateForm() {
+            const studentId = document.getElementById('rollNumber').value;
+            const firstName = document.getElementById('firstName').value;
+            const age = document.getElementById('age').value;
+
+            if (!/^[a-zA-Z0-9]{10}$/.test(studentId)) {
+                alert("Student ID must be a 10-digit alphanumeric value.");
+                return false;
+            }
+            if (!/^[a-zA-Z]+$/.test(firstName)) {
+                alert("Name should contain only alphabets.");
+                return false;
+            }
+            if (!age) {
+                alert("Age field cannot be empty.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form onsubmit="return validateForm()">
+        <label for="rollNumber">Student ID:</label>
+        <input type="text" id="rollNumber" required><br><br>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

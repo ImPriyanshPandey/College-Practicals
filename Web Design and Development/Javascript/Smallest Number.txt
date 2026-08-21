@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smallest of Five Numbers</title>
+    <script>
+        function findSmallest() {
+            const nums = document.getElementById('numbers').value.split(',').map(Number);
+            const smallest = Math.min(...nums);
+            document.getElementById('result').textContent = `Smallest Number: ${smallest}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Find the Smallest Number</h1>
+    <input type="text" id="numbers" placeholder="Enter 5 numbers separated by commas">
+    <button onclick="findSmallest()">Find Smallest</button>
+    <p id="result"></p>
+</body>
+</html>

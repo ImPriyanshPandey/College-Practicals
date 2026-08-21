@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semester Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border: 1px;
+        }
+        th, td {
+            border: 1px;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semester Timetable</h1>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>13:30-14:30</th>
+            <th>14:30-15:30</th>
+            <th>15:30-16:30</th>
+	    <th>16:30-17:30</th>
+	    <th>17:30-18:30</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>Machine Learning</td>
+            <td>Web Design and Development</td>
+            <td>Database Management Systems</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Machine Learning</td>
+            <td>English</td>
+            <td>Web Design and Development</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Personality Development</td>
+            <td>English</td>
+            <td>Machine Learning</td>
+	    <td>Database Management Systems</td>
+	</tr>
+	<tr>
+            <td>Thursday</td>
+            <td>General Management</td>
+            <td>--</td>
+            <td>Machine Learning</td>
+	    <td>Web Design and Development</td>
+	    <td>Database Management Systems</td>
+        </tr>
+	<tr>
+            <td>Friday</td>
+            <td>Personality Development</td>
+            <td>Database Management Systems</td>
+            <td>Machine Learning</td>
+	    <td>General Management</td>
+	</tr>
+	<tr>
+            <td>Wednesday</td>
+            <td>--</td>
+            <td>English</td>
+            <td>--</td>
+	    <td>Database Management Systems</td>
+	</tr>
+    </table>
+</body>
+</html>

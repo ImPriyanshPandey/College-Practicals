@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Operations</title>
+</head>
+<body>
+    <h1>Manage Student Data</h1>
+    <form method="POST" action="db_operations.php">
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber"><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department"><br><br>
+        <button type="submit" name="action" value="add">Add Data</button>
+        <button type="submit" name="action" value="delete">Delete Data</button>
+        <button type="submit" name="action" value="display">Display Data</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factors of a Number</title>
+    <script>
+        function findFactors() {
+            const num = parseInt(document.getElementById('number').value);
+            const factors = [];
+            for (let i = 1; i <= num; i++) {
+                if (num % i === 0) {
+                    factors.push(i);
+                }
+            }
+            document.getElementById('result').textContent = `Factors: ${factors.join(', ')}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Factors</h1>
+    <input type="number" id="number" placeholder="Enter a number">
+    <button onclick="findFactors()">Find Factors</button>
+    <p id="result"></p>
+</body>
+</html>
