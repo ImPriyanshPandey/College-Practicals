@@ -1,0 +1,3 @@
+debug.sh
+nohup.out
+output.txt
