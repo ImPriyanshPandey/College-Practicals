@@ -13,7 +13,7 @@ Each subject gets its own folder. Inside, you'll find things like:
 - **`.cpp`** files - C++ programs
 - **`.ipynb`** files - Jupyter Notebooks (a mix of code + notes + output, viewable right in the browser on GitHub)
 - **`.sh`** files - Bash/shell scripts (used in Ubuntu terminal, WSL, and Docker-based work)
-- **`.txt`, `.png`, `.jpg`** - notes, outputs, screenshots, and diagrams that go along with the code
+- **`.txt`, `.png`, `.jpg`, `.pdf`** - notes, outputs, screenshots, and diagrams that go along with the code
 
 And All files inside the Folder will be associated with the name of the Folder.
 
@@ -30,7 +30,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Data Structures | ✅ Uploaded |
 | Computer System Architecture | 🔜 Coming soon |
 | Web Design & Development | ✅ Uploaded |
-| Operating Systems | 🔜 Coming soon |
+| Operating Systems | ✅ Uploaded |
 | Database Management Systems | ✅ Uploaded |
 | Data Mining | ✅ Uploaded |
 | Machine Learning | 🔜 Coming soon |
@@ -42,7 +42,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Computer Networks | 🔜 Coming soon |
 | Cyber Forensics | 🔜 Coming soon |
 | Information Security | ✅ Uploaded |
-| Ethical Hacking | 🔜 Coming soon |
+| Ethical Hacking | ✅ Uploaded |
 | Blockchain and Its Applications | ✅ Uploaded |
 | Software Tools and Techniques | ✅ Uploaded |
 | Others (not specified) | 🔜 Coming soon |
