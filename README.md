@@ -28,19 +28,13 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Python | ✅ Uploaded |
 | C++ | ✅ Uploaded |
 | Data Structures | ✅ Uploaded |
-| Computer System Architecture | 🔜 Coming soon |
 | Web Design & Development | ✅ Uploaded |
 | Operating Systems | ✅ Uploaded |
 | Database Management Systems | ✅ Uploaded |
 | Data Mining | ✅ Uploaded |
-| Machine Learning | 🔜 Coming soon |
-| Deep Learning | 🔜 Coming soon |
-| Natural Language Processing | 🔜 Coming soon |
+| Machine Learning | ✅ Uploaded |
+| Natural Language Processing | ✅ Uploaded |
 | Reinforcement Learning | ✅ Uploaded |
-| Computer Graphics | 🔜 Coming soon |
-| Digital Image Processing | 🔜 Coming soon |
-| Computer Networks | 🔜 Coming soon |
-| Cyber Forensics | 🔜 Coming soon |
 | Information Security | ✅ Uploaded |
 | Ethical Hacking | ✅ Uploaded |
 | Blockchain and Its Applications | ✅ Uploaded |
