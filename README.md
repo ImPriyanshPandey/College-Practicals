@@ -32,6 +32,8 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Operating Systems | ✅ Uploaded |
 | Database Management Systems | ✅ Uploaded |
 | Data Mining | ✅ Uploaded |
+| Digital Image Processing | ✅ Uploaded |
+| Computer Graphics | ✅ Uploaded |
 | Machine Learning | ✅ Uploaded |
 | Natural Language Processing | ✅ Uploaded |
 | Reinforcement Learning | ✅ Uploaded |
