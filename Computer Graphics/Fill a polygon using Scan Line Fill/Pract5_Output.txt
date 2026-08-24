@@ -1,0 +1,43 @@
+Enter number of vertices of polygon : 4
+Enter polygon vertices (x y) : 
+10 20 
+10 50 
+25 30
+40 35
+
+Scanline filling steps :
+ Scanline Y=20: Fill from X=10 to X=10
+ Scanline Y=21: Fill from X=10 to X=12
+ Scanline Y=22: Fill from X=10 to X=14
+ Scanline Y=23: Fill from X=10 to X=16
+ Scanline Y=24: Fill from X=10 to X=18
+ Scanline Y=25: Fill from X=10 to X=20
+ Scanline Y=26: Fill from X=10 to X=22
+ Scanline Y=27: Fill from X=10 to X=24
+ Scanline Y=28: Fill from X=10 to X=26
+ Scanline Y=29: Fill from X=10 to X=28
+ Scanline Y=30: Fill from X=10 to X=25
+ Scanline Y=30: Fill from X=25 to X=30
+ Scanline Y=31: Fill from X=10 to X=24
+ Scanline Y=31: Fill from X=28 to X=32
+ Scanline Y=32: Fill from X=10 to X=23
+ Scanline Y=32: Fill from X=31 to X=34
+ Scanline Y=33: Fill from X=10 to X=22
+ Scanline Y=33: Fill from X=34 to X=36
+ Scanline Y=34: Fill from X=10 to X=22
+ Scanline Y=34: Fill from X=37 to X=38
+ Scanline Y=35: Fill from X=10 to X=21
+ Scanline Y=36: Fill from X=10 to X=20
+ Scanline Y=37: Fill from X=10 to X=19
+ Scanline Y=38: Fill from X=10 to X=19
+ Scanline Y=39: Fill from X=10 to X=18
+ Scanline Y=40: Fill from X=10 to X=17
+ Scanline Y=41: Fill from X=10 to X=16
+ Scanline Y=42: Fill from X=10 to X=16
+ Scanline Y=43: Fill from X=10 to X=15
+ Scanline Y=44: Fill from X=10 to X=14
+ Scanline Y=45: Fill from X=10 to X=13
+ Scanline Y=46: Fill from X=10 to X=13
+ Scanline Y=47: Fill from X=10 to X=12
+ Scanline Y=48: Fill from X=10 to X=11
+ Scanline Y=49: Fill from X=10 to X=10

@@ -1,0 +1,119 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct { int x, y; } Point;
+
+void plotCirclePoints(int xc, int yc, int x, int y, Point *pts, int *idx) {
+    // 8-way symmetry of circle
+    pts[(*idx)++] = (Point){ xc + x, yc + y };
+    pts[(*idx)++] = (Point){ xc - x, yc + y };
+    pts[(*idx)++] = (Point){ xc + x, yc - y };
+    pts[(*idx)++] = (Point){ xc - x, yc - y };
+    pts[(*idx)++] = (Point){ xc + y, yc + x };
+    pts[(*idx)++] = (Point){ xc - y, yc + x };
+    pts[(*idx)++] = (Point){ xc + y, yc - x };
+    pts[(*idx)++] = (Point){ xc - y, yc - x };
+}
+
+Point* midpointCircle(int xc, int yc, int r, int *count) {
+    // Upper bound of points = 8 * (r+1)
+    Point *pts = (Point*) malloc(8 * (r+1) * sizeof(Point));
+    if (!pts) {
+        fprintf(stderr, "Memory allocation failed\n");
+        *count = 0;
+        return NULL;
+    }
+
+    int x = 0, y = r;
+    int d = 1 - r;
+    int idx = 0;
+
+    plotCirclePoints(xc, yc, x, y, pts, &idx);
+
+    while (x < y) {
+        if (d < 0) {
+            d += 2*x + 3;
+        } else {
+            d += 2*(x - y) + 5;
+            y--;
+        }
+        x++;
+        plotCirclePoints(xc, yc, x, y, pts, &idx);
+    }
+
+    *count = idx;
+    return pts;
+}
+
+/* ASCII preview: draws grid with '#' for circle points and '.' otherwise */
+void ascii_preview(Point *pts, int n) {
+    if (n <= 0) return;
+
+    int minx = pts[0].x, maxx = pts[0].x;
+    int miny = pts[0].y, maxy = pts[0].y;
+    for (int i = 1; i < n; i++) {
+        if (pts[i].x < minx) minx = pts[i].x;
+        if (pts[i].x > maxx) maxx = pts[i].x;
+        if (pts[i].y < miny) miny = pts[i].y;
+        if (pts[i].y > maxy) maxy = pts[i].y;
+    }
+
+    int width = maxx - minx + 1;
+    int height = maxy - miny + 1;
+
+    const int MAX_W = 80, MAX_H = 40;
+    if (width > MAX_W || height > MAX_H) {
+        printf("\nASCII preview skipped (grid %d x %d too large)\n", width, height);
+        return;
+    }
+
+    char **grid = (char**) malloc(height * sizeof(char*));
+    for (int r = 0; r < height; r++) {
+        grid[r] = (char*) malloc((width + 1) * sizeof(char));
+        for (int c = 0; c < width; c++) grid[r][c] = '.';
+        grid[r][width] = '\0';
+    }
+
+    for (int i = 0; i < n; i++) {
+        int gx = pts[i].x - minx;
+        int gy = pts[i].y - miny;
+        int row = height - 1 - gy;  // flip y for display
+        int col = gx;
+        if (row >= 0 && row < height && col >= 0 && col < width)
+            grid[row][col] = '#';
+    }
+
+    printf("\nASCII preview (bounding box %d x %d):\n\n", width, height);
+    for (int r = 0; r < height; r++) {
+        printf("%s\n", grid[r]);
+        free(grid[r]);
+    }
+    free(grid);
+}
+
+int main(void) {
+    int xc, yc, r;
+    printf("Enter circle center (xc yc) and radius r:\n");
+    if (scanf("%d %d %d", &xc, &yc, &r) != 3) {
+        fprintf(stderr, "Invalid input.\n");
+        return 1;
+    }
+
+    int count = 0;
+    Point *pts = midpointCircle(xc, yc, r, &count);
+    if (!pts || count == 0) {
+        printf("No points generated.\n");
+        free(pts);
+        return 1;
+    }
+
+    printf("\nGenerated %d circle points (x, y):\n", count);
+    for (int i = 0; i < count; i++) {
+        printf("(%d, %d)\n", pts[i].x, pts[i].y);
+    }
+
+    ascii_preview(pts, count);
+
+    free(pts);
+    return 0;
+}

@@ -1,0 +1,14 @@
+Enter coordinates of the 3D point (X Y Z): 1 5 9
+Enter translation values (tx ty tz): 2 4 6
+Enter scaling factors (sx sy sz): 2 3 5
+Enter rotation angle around Z-axis (in degrees): 45
+
+After Translation (X: 3.00, Y: 9.00, Z: 15.00) 
+After Scaling (X: 6.00, Y: 27.00, Z: 75.00)    
+After Rotation (X: -4.24, Y: 8.49, Z: 15.00)   
+
+
+Enter distance for perspective projection (d): 25
+
+Parallel Projection (X: -4.24, Y: 8.49, Z: 0.00)
+Perspective Projection (X: -7.07, Y: 14.14, Z: 25.00)

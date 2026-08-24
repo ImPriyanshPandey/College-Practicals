@@ -1,0 +1,14 @@
+Enter clipping window (x_min y_min x_max y_max): 10 10 150 200
+Enter number of vertices of polygon: 4
+Enter the vertices (x y) :
+20 30
+10 40
+250 100
+90 70
+
+Clipped polygon vertices:
+(20.00, 30.00)
+(10.00, 40.00)
+(150.00, 75.00)
+(150.00, 81.25)
+(90.00, 70.00)
