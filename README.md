@@ -34,6 +34,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Data Mining | ✅ Uploaded |
 | Digital Image Processing | ✅ Uploaded |
 | Computer Graphics | ✅ Uploaded |
+| Cyber Forensics | ✅ Uploaded |
 | Machine Learning | ✅ Uploaded |
 | Natural Language Processing | ✅ Uploaded |
 | Reinforcement Learning | ✅ Uploaded |
