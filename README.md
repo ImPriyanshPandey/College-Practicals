@@ -42,6 +42,7 @@ These weren't just classes to pass - each one was genuinely exciting to dig into
 | Ethical Hacking | ✅ Uploaded |
 | Blockchain and Its Applications | ✅ Uploaded |
 | Software Tools and Techniques | ✅ Uploaded |
+| Literary Review | ✅ Uploaded |
 | Others (not specified) | 🔜 Coming soon |
 
 ---
